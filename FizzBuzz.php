@@ -6,7 +6,7 @@ class FizzBuzz
 
     public function count($number):string
     {
-        if($number % 3 == 0 && $number % 5 == 0) return "fizzbuzz";
+        if($this->isMultipleOf3($number) && $this->isMultipleOf5($number)) return "fizzbuzz";
         elseif($this->isMultipleOf3($number)) return "fizz";
         elseif ($this->isMultipleOf5($number)) return "buzz";
         else return strval($number);
