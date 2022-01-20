@@ -6,7 +6,7 @@ require 'FizzBuzz.php';
 
 class FizzBuzzTest extends TestCase
 {
-    public function testCountGiven1ShouldReturn1(){
+    public function testCountGiven1ShouldReturn1() : void{
         // Arrange
         $fizzbuzz = new FizzBuzz();
 
@@ -17,7 +17,7 @@ class FizzBuzzTest extends TestCase
         $this->assertEquals("1", $actual);
     }
 
-    public function testCountGiven2ShouldReturn2(){
+    public function testCountGiven2ShouldReturn2() : void{
         //Arrange
         $fizzbuzz = new FizzBuzz();
         //Act
@@ -26,7 +26,7 @@ class FizzBuzzTest extends TestCase
         $this->assertEquals("2", $actual);
     }
 
-    public function testGiven3ShouldReturnFizz(){
+    public function testGiven3ShouldReturnFizz() : void{
         //Arrange
         $fizzbuzz = new FizzBuzz();
         //Act
@@ -35,6 +35,13 @@ class FizzBuzzTest extends TestCase
         $this->assertEquals("fizz", $actual);
     }
 
-
+    public function testGiven5ShouldReturnBuzz() : void{
+        //Arrange
+        $fizzbuzz = new FizzBuzz();
+        // Act
+        $actual = $fizzbuzz->count(5);
+        //Assert
+        $this->assertEquals("buzz", $actual);
+    }
 
 }
